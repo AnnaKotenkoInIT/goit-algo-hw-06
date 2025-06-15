@@ -79,7 +79,14 @@ num_nodes = G.number_of_nodes()
 num_edges = G.number_of_edges()
 
 print(f"Кількість міст: {num_nodes}")
+print(f"Перелік міст: {G.nodes}")
 print(f"Кількість з'єднань: {num_edges}")
+print(f"Перелік усіх доступних міжміських з'єднань: {G.edges}")
+
+for city in G.nodes:
+    neighbors = list(G.neighbors(city))
+    print(f"Сусідні міста для {city}: {neighbors}")
+
 
 
 # Vertex colors
